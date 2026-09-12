@@ -1,0 +1,18 @@
+body {
+    background-color: #f0f4f8;
+}
+
+
+#judul-utama {
+    color: blue;
+}
+
+.badge {
+    background-color: grey;
+}
+
+.bagde-succes {
+    background-color: green;
+}
+
+

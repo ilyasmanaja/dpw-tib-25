@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demo CSS Flexbox</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f1f5f9;
+      padding: 24px;
+    }
+
+    .demo-section {
+      background: white;
+      padding: 20px;
+      margin-bottom: 24px;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+    }
+
+    /* CONTOH 1: NAVBAR (justify-content: space-between & align-items: center) */
+    .navbar {
+      display: flex;
+      flex-direction: row;            /* Item mengalir mendatar ke samping */
+      justify-content: flex-start; /* Logo di pojok kiri, Menu di pojok kanan */
+      align-items: center;            /* Rata tengah secara vertikal */
+      height: 60px;
+      padding: 0 20px;
+      background-color: #1e293b;
+      color: white;
+      border-radius: 6px;
+      gap: 50px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;                      /* Jarak bersih otomatis antar menu */
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* CONTOH 2: KARTU LAYOUT (Ubah nilai di bawah saat live demo) */
+    .flex-container {
+      display: flex;
+      flex-direction: row;        /* Coba ganti: column */
+      justify-content: center;    /* Coba ganti: space-between, flex-start, flex-end */
+      align-items: center;        /* Coba ganti: flex-start, stretch */
+      gap: 32px;                  /* Coba ubah: 0px atau 32px */
+      
+      height: 180px;              /* Memberi ruang vertikal agar align-items kelihatan */
+      background-color: #e2e8f0;
+      border: 2px dashed #94a3b8;
+      padding: 12px;
+      border-radius: 6px;
+    }
+
+    .card {
+      background-color: #2563eb;
+      color: white;
+      padding: 16px 24px;
+      border-radius: 6px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .card-tall {
+      padding: 30px 24px; /* Dibuat lebih tinggi untuk memperjelas efek align-items */
+      background-color: #0d9488;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Demo 1: Navbar Real-world -->
+  <div class="demo-section">
+    <h3>1. Kasus Nyata: Navbar Modern</h3>
+    <div class="navbar">
+      <div style="font-weight: bold;">MY LOGO</div>
+      <ul class="nav-links">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Demo 2: Playground Box -->
+  <div class="demo-section">
+    <h3>2. Flex Playground (Eksperimen Nilai)</h3>
+    <div class="flex-container">
+      <div class="card">Item 1</div>
+      <div class="card card-tall">Item 2 (Tinggi)</div>
+      <div class="card">Item 3</div>
+    </div>
+  </div>
+
+</body>
+</html>

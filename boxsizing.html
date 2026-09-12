@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demo Box Sizing</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f8fafc;
+      padding: 30px;
+    }
+
+    .container {
+      display: flex;
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    /* Box 1: Default Browser (content-box) */
+    .box-content {
+      box-sizing: content-box; /* Total lebar = 250 + 50(pad) + 10(bor) = 310px */
+      width: 250px;
+      padding: 25px;
+      border: 5px solid #ef4444; /* Merah */
+      background-color: #fecaca;
+    }
+
+    /* Box 2: Modern Standard (border-box) */
+    .box-border {
+      box-sizing: border-box; /* Total lebar = tetap persis 250px */
+      width: 250px;
+      padding: 25px;
+      border: 5px solid #10b981; /* Hijau */
+      background-color: #a7f3d0;
+    }
+
+    .info {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Box content-box -->
+    <div class="box-content">
+      <div class="info">content-box</div>
+      <p>Lebar di CSS diset <b>250px</b>, tapi ukuran total membengkak jadi <b>310px</b> di layar.</p>
+    </div>
+
+    <!-- Box border-box -->
+    <div class="box-border">
+      <div class="info">border-box</div>
+      <p>Lebar di CSS diset <b>250px</b>, ukuran total di layar tetap konsisten <b>250px</b>.</p>
+    </div>
+  </div>
+
+</body>
+</html>

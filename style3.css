@@ -1,0 +1,12 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#judul-utama {
+    color: navy;
+}
+
+.paragraf {
+    color: grey;
+    line-height: 1.6;
+}

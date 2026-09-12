@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1. Kondisi Normal */
+        .btn {
+            background-color: #2563eb;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            /* Mengubah kursor jadi ikon tangan */
+            transition: all 0.25s ease;
+            /* Membuat perubahan warna halus */
+        }
+
+        /* 2. Saat Kursor Berada di Atas Tombol */
+        .btn:hover {
+            background-color: #1d4ed8;
+            /* Warna berubah lebih gelap */
+        }
+
+        /* 3. Saat Tombol Sedang Ditekan / Diklik Tahan */
+        .btn:active {
+            transform: scale(0.96);
+            /* Efek tombol sedikit menyusut/melesak */
+        }
+
+        /* 4. Saat Tombol Dipilih Menggunakan Navigasi Keyboard (Tombol Tab) */
+        .btn:focus {
+            outline: 3px solid #93c5fd;
+            /* Muncul ring/garis batas luar */
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn">Klik Saya</button>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Box Model Demo</title>
+  <style>
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      background-color: #f1f5f9;
+      padding: 40px;
+    }
+
+    /* Container untuk memperjelas batas luar margin */
+    .parent-container {
+      background-color: #e2e8f0;
+      border: 2px dashed #94a3b8;
+      padding: 10px;
+      display: inline-block;
+    }
+
+    /* Box utama untuk eksperimen */
+    .demo-box {
+      /* 1. CONTENT SIZE */
+      width: 260px;
+
+      /* 2. PADDING: Ruang di DALAM border (berwarna biru muda) */
+      padding: 30px;
+      background-color: #93c5fd;
+
+      /* 3. BORDER: Garis pembatas */
+      border: 6px solid #2563eb;
+
+      /* 4. MARGIN: Ruang di LUAR border (dorongan ke container abu-abu) */
+      margin: 40px;
+
+
+      border-radius: 8px;
+    }
+
+    /* Elemen teks sebagai Content aktual */
+    .content-area {
+      background-color: #ffffff;
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+      color: #1e3a8a;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="parent-container">
+    <div class="demo-box">
+      <div class="content-area">
+        Ini adalah Content
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
