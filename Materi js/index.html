@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn">Mode</button>
+
+    <script>
+        const button = document.querySelector(".btn")
+        const body = document.querySelector("body")
+
+        let isAktif = false
+
+        button.addEventListener("click", () => {
+            isAktif = !isAktif
+
+            if(isAktif) {
+                body.style.backgroundColor = "white"
+                button.innerText = "Mode siang"
+            }   else {
+                body.style.backgroundColor = "black"
+                button.innerText = "Mode malam"
+            }
+        })
+    </script>
+</body>
+</html>

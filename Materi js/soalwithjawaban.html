@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Latihan DOM Counter</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        #angka {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="angka">0</div>
+    <button id="btnTambah">Tambah (+)</button>
+    <button id="btnReset">Reset</button>
+
+    <script>
+        // 1. Seleksi elemen
+        const displayAngka = document.querySelector("#angka");
+        const btnTambah = document.querySelector("#btnTambah");
+        const btnReset = document.querySelector("#btnReset");
+
+        // 2. Inisialisasi variabel state
+        let count = 0;
+
+        // 3. Logika tombol Tambah
+        btnTambah.addEventListener("click", () => {
+            count++;
+            displayAngka.innerText = count;
+
+            // Syarat warna jika >= 5
+            if (count >= 5) {
+                displayAngka.style.color = "red";
+            }
+        });
+
+        // 4. Logika tombol Reset
+        btnReset.addEventListener("click", () => {
+            count = 0;
+            displayAngka.innerText = count;
+            displayAngka.style.color = "black";
+        });
+    </script>
+</body>
+
+</html>
