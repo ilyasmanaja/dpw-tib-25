@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Sederhana Tailwind</title>
+    <!-- CDN Tailwind Play -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="p-6">
+
+    <!-- 1. TATA LETAK: Membatasi lebar di tengah -->
+    <div class="max-w-4xl mx-auto">
+        <h3 class="text-xl font-bold mb-4">Tata Letak & Card (Tailwind)</h3>
+
+        <!-- 2. TATA LETAK: Grid (1 kolom di HP, 3 kolom di layar sedang/laptop) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+            <!-- 3. STRUKTUR CARD: Dirakit dari border + rounded + padding -->
+            <div class="border rounded p-4">
+                <h4 class="font-bold mb-2">Kartu 1</h4>
+                <p>Konten kartu yang dirakit sendiri dari utility border, rounded, dan padding.</p>
+            </div>
+
+            <div class="border rounded p-4">
+                <h4 class="font-bold mb-2">Kartu 2</h4>
+                <p>Konten kartu kedua dengan ukuran yang otomatis sama berkat CSS grid.</p>
+            </div>
+
+            <div class="border rounded p-4">
+                <h4 class="font-bold mb-2">Kartu 3</h4>
+                <p>Konten kartu ketiga dengan ukuran yang otomatis sama berkat CSS grid.</p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
